@@ -6,16 +6,15 @@ public class Main {
 		
 		int totalWaitTime=0;
 		int serviceTime = 0;
-		int serviceCustomer = 0;
 		int CusNum = 1;
 		boolean Counter = true;
 	
-		for (int i = 0; i < 60; i++) {
-			System.out.println("-----현재 시간-----");
+		for (int i = 1; i < 60; i++) {
+			System.out.printf("-----현재 시간 %d분-----\n",i);
 			if (Counter == true)
-				System.out.println("태피는 작업 중\n");
-			else
 				System.out.println("태피는 휴식 중\n");
+			else
+				System.out.println("태피는 작업 중\n");
 			
 			if (((int) (Math.random() * 4) + 1) == 4) {
 				Person per = new Person(i, CusNum++);
@@ -33,7 +32,9 @@ public class Main {
 			}
 			else if (Counter) {
 				if (!Person.isEmpty()) {
-					Person cus = Person.dequeue();
+					Person cus = new Person(0,0);
+					cus=Person.dequeue();
+					serviceTime=cus.serviceTime;
 					System.out.printf("고객 %d의 업무가 %d분에 처리됩니다.\n대기시간은 %d분이었으며 현재 대기중인 인원 : %d\n", cus.personNum, i,
 							i - cus.arriveTime, CusNum - cus.personNum - 1);
 					totalWaitTime += (i - cus.arriveTime);
@@ -41,6 +42,6 @@ public class Main {
 				}
 			}
 		}
-		System.out.printf("-----60분 업무 종료------\n총 대기시간은 %d분이며 처리 못한 인원은 %d명입니다.",totalWaitTime, CusNum - serviceCustomer - 1);
+		System.out.printf("-----60분 업무 종료------\n총 대기시간은 %d분이며 처리 못한 인원은 %d명입니다.",totalWaitTime, Person.size());
 	}
 }
