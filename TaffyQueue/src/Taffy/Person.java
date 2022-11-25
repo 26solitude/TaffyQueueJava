@@ -2,12 +2,12 @@ package Taffy;
 
 public class Person {
 	public int arriveTime; //도착시간
-//	public int startService; //서비스 시작 시간
-//	public int endService; //서비스 종료 시간
+	public int startService; //서비스 시작 시간
+	public int endService; //서비스 종료 시간
 	public int serviceTime; //서비스 시간
-//	public int waitTime; //대기 시간
+	public int waitTime; //대기 시간
 	public int personNum; //고객의 번호
-//	boolean doService; //서비스가 수행되었는가
+	boolean doService; //서비스가 수행되었는가
 	
 	public Person(int currentTime, int number) {
 		this.arriveTime=currentTime;
