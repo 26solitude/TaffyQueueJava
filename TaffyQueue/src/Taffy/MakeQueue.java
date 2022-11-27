@@ -17,9 +17,9 @@ public class MakeQueue<T> {
 		return Queue.remove(0);
 	}
 
-	public T peek() {
-		return Queue.elementAt(0);
-	}
+//	public T peek() {
+//		return Queue.elementAt(0);
+//	}
 
 	public boolean isEmpty() {
 		return Queue.isEmpty();
