@@ -27,12 +27,18 @@ public class PrintTot {
 
 		for (int i = 0; i < ResSize; i++) {
 			p1 = Result.dequeue();
-			if (p1.doService == false) {
-				System.out.println(p1.FailtoString());
-				writer.println(p1.FailtoString());
+
+			if (p1.doService == true) {
+				if (p1.vip == true) {
+					writer.println(p1.toString() + "   (vip)");
+					System.out.println("	(vip)");
+				} else {
+					writer.println(p1.toString());
+					System.out.println("");
+				}
 			} else {
-				System.out.println(p1.toString());
-				writer.println(p1.toString());
+					writer.println(p1.FailtoString());
+					System.out.println();
 			}
 		}
 		// 5. PrintWriter close
@@ -40,4 +46,5 @@ public class PrintTot {
 		writer.close();
 
 	}
+
 }
