@@ -25,6 +25,10 @@ public class Person {
 		return personNum +"번 고객 | 도착시간=" + arriveTime + "분 서비스 시작시간=" + startService
 				+ "분 서비스 종료시간=" + endService + "분 서비스 소요시간=" + serviceTime + "분 대기시간=" + waitTime+"분";
 	}
+	
+	public String FailtoString() {
+		return personNum +"번 고객 | 도착시간=" + arriveTime + "분 서비스 소요시간=" + serviceTime + "분 대기시간=" + waitTime+"분 업무수행 : 실패";
+	}
 
 	public void ServiceStart(int currentTime) {
 		this.waitTime = currentTime - this.arriveTime;
@@ -36,4 +40,5 @@ public class Person {
 		this.endService = currentTime;
 		doService = true;
 	}
+	
 }
