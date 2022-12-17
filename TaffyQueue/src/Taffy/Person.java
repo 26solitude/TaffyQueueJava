@@ -22,8 +22,8 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "personNum " + personNum + " [arriveTime=" + arriveTime + ", startService=" + startService
-				+ ", endService=" + endService + ", serviceTime=" + serviceTime + ", waitTime=" + waitTime + "]";
+		return personNum +"번 고객 | 도착시간=" + arriveTime + "분 서비스 시작시간=" + startService
+				+ "분 서비스 종료시간=" + endService + "분 서비스 소요시간=" + serviceTime + "분 대기시간=" + waitTime+"분";
 	}
 
 	public void ServiceStart(int currentTime) {
