@@ -7,7 +7,8 @@ public class WorkProcess {
 		System.out.println("태피 상점이 업무를 시작합니다.");
 		for (int i = 1; i < 480; i++) { // 480분간 업무 수행
 			System.out.println();
-			IsWorkNow(Person, i); // 현재 시간 출력 및 태피가 업무 중인지 여부 검사
+			//IsWorkNow(Person, i); // 현재 시간 출력 및 태피가 업무 중인지 여부 검사
+			System.out.printf("--------------------현재 시간 %d분--------------------\n", i);
 			TotCusNum = IsCusEnter(Person, Vip, TotCusNum, i); // 손님 입장여부 검사 및 총 인원 계산
 			if (ServiceTime > 0) { // 서비스타임이 주어졌을 때 업무를 수행
 				System.out.printf("고객 %d의 업무를 처리중입니다.\n", p1.personNum);
@@ -85,8 +86,8 @@ public class WorkProcess {
 	}
 
 	public static void IsWorkNow(MakeQueue<Person> Person, int i) {
-		System.out.printf("--------------------현재 시간 %d분--------------------\n", i);
 //		if (p1.doService == true) { // 태피가 업무중인지 여부 검사
+		
 //			System.out.println("태피는 휴식 중\n");
 //		} else {
 //			System.out.println("태피는 작업 중\n");
@@ -95,7 +96,7 @@ public class WorkProcess {
 		if (Person.size() > 0) {
 			// System.out.println("태피는 작업 중"); // 휴식 중인 경우에만 출력
 		} else {
-			System.out.println("태피는 휴식 중");
+			//System.out.println("태피는 휴식 중");
 		}
 
 	}
