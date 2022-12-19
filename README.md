@@ -12,6 +12,7 @@
 매 분단위의 시뮬레이션은 3개의 이벤트인 고객의 도착시간, 고객의 서비스 시작시간, 고객의 서비스 완료시간을 체크한다.
 최종적으로 이 시뮬레이션에서 주어진 시간 동안에 고객의 수, 전체 서비스 시간, 평균 서비스 시간, 평균 대기시간 등의 통계 정보를 출력한다.
 
-![vxzzxvvxzzx](https://user-images.githubusercontent.com/109591135/205203530-30898de6-008e-43f3-ac6f-ec4e7e81865d.JPG)
+![sqfqfqsfq](https://user-images.githubusercontent.com/109591135/208357837-50a4800f-1b0d-4b72-a24f-d132a4f7bef0.jpg)
 
-![ssaaaaaaaaaaaaaaaaaa](https://user-images.githubusercontent.com/109591135/205203460-9df84789-15f1-49b4-8450-088d45f8199e.jpg)
+![QFWFQWQFWQFW](https://user-images.githubusercontent.com/109591135/208357617-8934062c-f1e8-4de9-8731-ee14c154770e.JPG)
+
